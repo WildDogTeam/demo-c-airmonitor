@@ -19,7 +19,7 @@
 下载[wilddog-client-arduino](https://github.com/WildDogTeam/wilddog-client-arduino)，并根据其说明进行安装。
 
 ###第三步 修改demo源码并编译烧录到arduino中
-打开`demo-c-pm25.ino`并把`yourAppId`改成你的AppId，并编译烧录到arduino中：
+打开`demo-c-pm25.ino`，把`yourAppId`改成你的AppId，并编译烧录到arduino中：
 
 	#define YOURURL  "coap://yourAppId.wilddogio.com/"
 
