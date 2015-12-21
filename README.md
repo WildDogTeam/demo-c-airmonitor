@@ -13,8 +13,8 @@
 	
 ###第一步 硬件sensor连接
 根据下图把DHT11和GP2Y1010 连接到arduino上。
-![GP2Y1010 接线示意图](https://raw.githubusercontent.com/WildDogTeam/demo-c-airmonitor/master/docs/GP2Y1010AU0F_pinconnect.jpg)
-![DHT11管脚接口示意图](https://raw.githubusercontent.com/WildDogTeam/demo-c-airmonitor/master/docs/dht11-pinconnect.png)
+![GP2Y1010 接线示意图](./docs/GP2Y1010AU0F_pinconnect.jpg)
+![DHT11管脚接口示意图](./docs/dht11-pinconnect.png)
 ###第二步 wilddog-client-arduino库安装
 下载[wilddog-client-arduino](https://github.com/WildDogTeam/wilddog-client-arduino)，并根据其说明进行安装。
 
