@@ -1,5 +1,5 @@
 ## 简介
-`demo` 展示了如何利用野狗adk和arduino，温湿度/粉尘传感器快速构建一个实时空气采集系统，并在浏览器上把测温度、湿度、pm2.5的实时值动态的显示出来，我们的sdk目录结构如下：
+该项目展示了如何利用野狗adk和arduino，温湿度/粉尘传感器快速构建一个实时空气采集系统，并在浏览器上把测温度、湿度、pm2.5的实时值动态的显示出来，项目目录结构如下：
 
 	.
 	├── docs
@@ -23,4 +23,4 @@
 	#define YOURURL  "coap://yourAppId.wilddogio.com/"
 
 ###第四步 在浏览上实时显示温度、湿度、空气粉尘密度值
-用浏览器打开`demo-c-airmonitor/html/index.html`，并在页面的show左方的输入框中输入你的AppId，点击`show`，你的arduino实时采集的温度、湿度、粉尘密度值显示页面上。
+用浏览器打开html目录下的`index.html`，并在页面的show左方的输入框中输入你的AppId，点击`show`，你的arduino实时采集的温度、湿度、粉尘密度值会实时显示在页面上。
