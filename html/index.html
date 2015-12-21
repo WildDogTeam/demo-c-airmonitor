@@ -1,0 +1,21 @@
+<!doctype html><html ng-app="chartDemo"><head><meta charset="utf-8"><title>demo-c-pm25</title><meta name="description" content=""><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="styles/vendor-f5ce71a6e3.css"><style type="text/css" media="screen">
+        .container{
+            overflow:hidden;
+            width:100%;
+        }
+        .chart-container{
+            float:left;
+            width:50%;
+        }
+        .input{
+            float:left;
+            padding-top:20px;
+            padding-left:20px;
+            width:50%;
+        }
+        .hide{
+            display:none;
+        }
+    </style></head><body><!--[if lt IE 10]>
+ <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--><div class="container" ng-controller="LineCtrl"><canvas ng-repeat="d in data" id="line" class="chart chart-line" chart-data="d.data" chart-labels="d.labels" chart-legend="true" chart-series="d.series" chart-click="onClick"></canvas><div ng-class="{hide:hide,input:true}"><div class="area"><input ng-model="url"><button ng-click="onShow(url)">show</button></div></div></div><script src="scripts/vendor-8ad7670906.js"></script><script src="scripts/app-0d0f35f48d.js"></script></body></html>
