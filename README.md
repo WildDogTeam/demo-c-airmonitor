@@ -5,8 +5,11 @@
 	.
 	├── docs
 	├── html
+	├── lib
 	└── src
 
+	`docs`:Arduino 和传感器的接线说明.
+	`lib`:Arduino 库，安装在.\Arduino\libraries.
 	`src`:Arduino 空气检测的arduino实现源码.
 	`html`:html页面源码.
 
@@ -17,7 +20,10 @@
 ![GP2Y1010 接线示意图](./docs/GP2Y1010AU0F_pinconnect.jpg)
 ![DHT11管脚接口示意图](./docs/dht11-pinconnect.png)
 ###第二步 wilddog-client-arduino库安装
-下载[wilddog-client-arduino](https://github.com/WildDogTeam/wilddog-client-arduino)，并根据其说明进行安装。
+	
+
+	1. 安装野狗sdk,下载[wilddog-client-arduino](https://github.com/WildDogTeam/wilddog-client-arduino)，并根据其说明进行安装。
+	2. 安装DHT11库，把`/demo-c-airmonitor/lib/DHT11` 拷贝到arduino库目录下\Arduino\libraries\。
 
 ###第三步 修改demo源码并编译烧录到arduino中
 打开`demo-c-pm25.ino`，把`yourAppId`改成你的AppId，并编译烧录到arduino中：
