@@ -133,8 +133,9 @@ void setValueCallBack(const char *pdata, int error, void* arg)
   Serial.print(error);
   if(pdata)
   {
-      Serial.print("\n get data : ");
+      Serial.print("\n respond  : ");
       Serial.print(pdata);
+      Serial.print("\n");
     }
   if (arg)
      Serial.print(*(char*)arg);
