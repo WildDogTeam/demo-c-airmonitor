@@ -33,7 +33,7 @@
 #include <dht11.h>
 #include "Wilddog_utility.h"
 
-#define YOURURL  "coap://YourAppId.wilddogio.com/"
+#define YOURURL  "coap://YourAPPID.wilddogio.com/"
 #define KEY_PM25    "PM25"
 #define KEY_temperature    "temperature"
 #define KEY_humidity        "humidity"
@@ -157,7 +157,11 @@ int updataPM25ToServer( unsigned int  dustDensity , unsigned int temp,unsigned i
     
   memset(json_data,0,JSON_DATA_LEN);
 
-  sprintf(json_data,"{\"%s\":\"%u\",\"%s\":\"%u\",\"%s\":\"%u\"}",KEY_PM25,dustDensity,KEY_temperature,temp,KEY_humidity,humidity);
+  if(dustDensity >= 10)
+    sprintf(json_data,"{\"%s\":\"0.%u\",\"%s\":\"%u\",\"%s\":\"%u\"}",KEY_PM25,dustDensity,KEY_temperature,temp,KEY_humidity,humidity);
+  else
+    sprintf(json_data,"{\"%s\":\"0.0%u\",\"%s\":\"%u\",\"%s\":\"%u\"}",KEY_PM25,dustDensity,KEY_temperature,temp,KEY_humidity,humidity);
+    
   Serial.print(json_data);
   Serial.print("\n");
   res = p_wd->setValue(json_data,setValueCallBack,(void*)NULL);
